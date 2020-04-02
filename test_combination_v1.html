@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test of II combination</title>
+    <link rel="stylesheet" href="style_test.css">
+    <script src="list_of_functions.js"></script>
+    
+</head>
+<body>
+    <div id="all">
+        <div id="input_div_1">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_1">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_1"></div>
+        <div id="input_div_2">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_2">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_2"></div>
+        <div id="input_div_3">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_3">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_3"></div>
+        <div id="input_div_4">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_4">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_4"></div>
+        <div id="input_div_5">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_5">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_5"></div>
+    </div>
+<button id="check"style="position: absolute;top:80vh;width: 100vw;text-align: center;">Проверить</button>
+<div id="result" style="position: absolute;top:10vh;width: 100vw;text-align: center;">Тут выпишется комбинация...<!--<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b> --></div>
+        <script>
+            check.onclick=function(){
+                /*************************************************************************/
+                if(input_cards_masty_1.value=="Черви"){input_cards_masty_1.value=="chervi"}
+                if(input_cards_masty_1.value=="Пики" ){input_cards_masty_1.value=="piki"}
+                if(input_cards_masty_1.value=="Трефы"){input_cards_masty_1.value=="trefi"}
+                if(input_cards_masty_1.value=="Бубны"){input_cards_masty_1.value=="bubni"}
+                if(input_cards_masty_2.value=="Черви"){input_cards_masty_2.value=="chervi"}
+                if(input_cards_masty_2.value=="Пики" ){input_cards_masty_2.value=="piki"}
+                if(input_cards_masty_2.value=="Трефы"){input_cards_masty_2.value=="trefi"}
+                if(input_cards_masty_2.value=="Бубны"){input_cards_masty_2.value=="bubni"}
+                if(input_cards_masty_3.value=="Черви"){input_cards_masty_3.value=="chervi"}
+                if(input_cards_masty_3.value=="Пики" ){input_cards_masty_3.value=="piki"}
+                if(input_cards_masty_3.value=="Трефы"){input_cards_masty_3.value=="trefi"}
+                if(input_cards_masty_3.value=="Бубны"){input_cards_masty_3.value=="bubni"}
+                if(input_cards_masty_4.value=="Черви"){input_cards_masty_4.value=="chervi"}
+                if(input_cards_masty_4.value=="Пики" ){input_cards_masty_4.value=="piki"}
+                if(input_cards_masty_4.value=="Трефы"){input_cards_masty_4.value=="trefi"}
+                if(input_cards_masty_4.value=="Бубны"){input_cards_masty_4.value=="bubni"}
+                if(input_cards_masty_5.value=="Черви"){input_cards_masty_5.value=="chervi"}
+                if(input_cards_masty_5.value=="Пики" ){input_cards_masty_5.value=="piki"}
+                if(input_cards_masty_5.value=="Трефы"){input_cards_masty_5.value=="trefi"}
+                if(input_cards_masty_5.value=="Бубны"){input_cards_masty_5.value=="bubni"}
+                /************************************************************************/
+                if(input_cards_numeral_1.value=="Валет" ){input_cards_numeral_1.value==11}
+                if(input_cards_numeral_1.value=="Дама"  ){input_cards_numeral_1.value==12}
+                if(input_cards_numeral_1.value=="Король"){input_cards_numeral_1.value==13}
+                if(input_cards_numeral_1.value=="Туз"   ){input_cards_numeral_1.value==14}
+                if(input_cards_numeral_2.value=="Валет" ){input_cards_numeral_2.value==11}
+                if(input_cards_numeral_2.value=="Дама"  ){input_cards_numeral_2.value==12}
+                if(input_cards_numeral_2.value=="Король"){input_cards_numeral_2.value==13}
+                if(input_cards_numeral_2.value=="Туз"   ){input_cards_numeral_2.value==14}
+                if(input_cards_numeral_3.value=="Валет" ){input_cards_numeral_3.value==11}
+                if(input_cards_numeral_3.value=="Дама"  ){input_cards_numeral_3.value==12}
+                if(input_cards_numeral_3.value=="Король"){input_cards_numeral_3.value==13}
+                if(input_cards_numeral_3.value=="Туз"   ){input_cards_numeral_3.value==14}
+                if(input_cards_numeral_4.value=="Валет" ){input_cards_numeral_4.value==11}
+                if(input_cards_numeral_4.value=="Дама"  ){input_cards_numeral_4.value==12}
+                if(input_cards_numeral_4.value=="Король"){input_cards_numeral_4.value==13}
+                if(input_cards_numeral_4.value=="Туз"   ){input_cards_numeral_4.value==14}
+                if(input_cards_numeral_5.value=="Валет" ){input_cards_numeral_5.value==11}
+                if(input_cards_numeral_5.value=="Дама"  ){input_cards_numeral_5.value==12}
+                if(input_cards_numeral_5.value=="Король"){input_cards_numeral_5.value==13}
+                if(input_cards_numeral_5.value=="Туз"   ){input_cards_numeral_5.value==14}
+                /************************************************************************/
+                lay_out_cards(input_cards_masty_1.value,input_cards_masty_2.value,input_cards_masty_3.value,input_cards_masty_4.value,input_cards_masty_5.value,input_cards_numeral_1.value,input_cards_numeral_2.value,input_cards_numeral_3.value,input_cards_numeral_4.value,input_cards_numeral_5,"result")
+            }
+        </script>
+
+<datalist id="masty">
+            <option value="Черви">
+            <option value="Пики" >
+            <option value="Трефы">
+            <option value="Бубны">
+        </datalist>
+        <datalist id="numeral">
+            <option value=1>
+            <option value=2>
+            <option value=3>
+            <option value=4>
+            <option value=5>
+            <option value=6>
+            <option value=7>
+            <option value=8>
+            <option value=9>
+            <option value=10>
+            <option value="Валет">
+            <option value="Дама">
+            <option value="Король">
+            <option value="Туз">
+        </datalist>
+</body>
+</html>
