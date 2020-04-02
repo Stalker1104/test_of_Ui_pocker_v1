@@ -30,50 +30,62 @@
 <div id="result" style="position: absolute;top:10vh;width: 100vw;text-align: center;">Тут выпишется комбинация...<!--<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b> --></div>
         <script>
             check.onclick=function(){
-                /*************************************************************************/
-                if(input_cards_masty_1.value=="Черви"){input_cards_masty_1.value=="chervi"}
-                if(input_cards_masty_1.value=="Пики" ){input_cards_masty_1.value=="piki"}
-                if(input_cards_masty_1.value=="Трефы"){input_cards_masty_1.value=="trefi"}
-                if(input_cards_masty_1.value=="Бубны"){input_cards_masty_1.value=="bubni"}
-                if(input_cards_masty_2.value=="Черви"){input_cards_masty_2.value=="chervi"}
-                if(input_cards_masty_2.value=="Пики" ){input_cards_masty_2.value=="piki"}
-                if(input_cards_masty_2.value=="Трефы"){input_cards_masty_2.value=="trefi"}
-                if(input_cards_masty_2.value=="Бубны"){input_cards_masty_2.value=="bubni"}
-                if(input_cards_masty_3.value=="Черви"){input_cards_masty_3.value=="chervi"}
-                if(input_cards_masty_3.value=="Пики" ){input_cards_masty_3.value=="piki"}
-                if(input_cards_masty_3.value=="Трефы"){input_cards_masty_3.value=="trefi"}
-                if(input_cards_masty_3.value=="Бубны"){input_cards_masty_3.value=="bubni"}
-                if(input_cards_masty_4.value=="Черви"){input_cards_masty_4.value=="chervi"}
-                if(input_cards_masty_4.value=="Пики" ){input_cards_masty_4.value=="piki"}
-                if(input_cards_masty_4.value=="Трефы"){input_cards_masty_4.value=="trefi"}
-                if(input_cards_masty_4.value=="Бубны"){input_cards_masty_4.value=="bubni"}
-                if(input_cards_masty_5.value=="Черви"){input_cards_masty_5.value=="chervi"}
-                if(input_cards_masty_5.value=="Пики" ){input_cards_masty_5.value=="piki"}
-                if(input_cards_masty_5.value=="Трефы"){input_cards_masty_5.value=="trefi"}
-                if(input_cards_masty_5.value=="Бубны"){input_cards_masty_5.value=="bubni"}
+                
                 /************************************************************************/
-                if(input_cards_numeral_1.value=="Валет" ){input_cards_numeral_1.value==11}
-                if(input_cards_numeral_1.value=="Дама"  ){input_cards_numeral_1.value==12}
-                if(input_cards_numeral_1.value=="Король"){input_cards_numeral_1.value==13}
-                if(input_cards_numeral_1.value=="Туз"   ){input_cards_numeral_1.value==14}
-                if(input_cards_numeral_2.value=="Валет" ){input_cards_numeral_2.value==11}
-                if(input_cards_numeral_2.value=="Дама"  ){input_cards_numeral_2.value==12}
-                if(input_cards_numeral_2.value=="Король"){input_cards_numeral_2.value==13}
-                if(input_cards_numeral_2.value=="Туз"   ){input_cards_numeral_2.value==14}
-                if(input_cards_numeral_3.value=="Валет" ){input_cards_numeral_3.value==11}
-                if(input_cards_numeral_3.value=="Дама"  ){input_cards_numeral_3.value==12}
-                if(input_cards_numeral_3.value=="Король"){input_cards_numeral_3.value==13}
-                if(input_cards_numeral_3.value=="Туз"   ){input_cards_numeral_3.value==14}
-                if(input_cards_numeral_4.value=="Валет" ){input_cards_numeral_4.value==11}
-                if(input_cards_numeral_4.value=="Дама"  ){input_cards_numeral_4.value==12}
-                if(input_cards_numeral_4.value=="Король"){input_cards_numeral_4.value==13}
-                if(input_cards_numeral_4.value=="Туз"   ){input_cards_numeral_4.value==14}
-                if(input_cards_numeral_5.value=="Валет" ){input_cards_numeral_5.value==11}
-                if(input_cards_numeral_5.value=="Дама"  ){input_cards_numeral_5.value==12}
-                if(input_cards_numeral_5.value=="Король"){input_cards_numeral_5.value==13}
-                if(input_cards_numeral_5.value=="Туз"   ){input_cards_numeral_5.value==14}
+                var numeral_1;
+                var numeral_2;
+                var numeral_3;
+                var numeral_4;
+                var numeral_5;
+                var masty_1;
+                var masty_2;
+                var masty_3;
+                var masty_4;
+                var masty_5;
                 /************************************************************************/
-                lay_out_cards(input_cards_masty_1.value,input_cards_masty_2.value,input_cards_masty_3.value,input_cards_masty_4.value,input_cards_masty_5.value,input_cards_numeral_1.value-0,input_cards_numeral_2.value-0,input_cards_numeral_3.value-0,input_cards_numeral_4.value-0,input_cards_numeral_5-0,"result")
+                if(input_cards_masty_1.value=="Черви"){masty_1="chervi"}
+                if(input_cards_masty_1.value=="Пики" ){masty_1="piki"}
+                if(input_cards_masty_1.value=="Трефы"){masty_1="trefi"}
+                if(input_cards_masty_1.value=="Бубны"){masty_1="bubni"}
+                if(input_cards_masty_2.value=="Черви"){masty_2="chervi"}
+                if(input_cards_masty_2.value=="Пики" ){masty_2="piki"}
+                if(input_cards_masty_2.value=="Трефы"){masty_2="trefi"}
+                if(input_cards_masty_2.value=="Бубны"){masty_2="bubni"}
+                if(input_cards_masty_3.value=="Черви"){masty_3="chervi"}
+                if(input_cards_masty_3.value=="Пики" ){masty_3="piki"}
+                if(input_cards_masty_3.value=="Трефы"){masty_3="trefi"}
+                if(input_cards_masty_3.value=="Бубны"){masty_3="bubni"}
+                if(input_cards_masty_4.value=="Черви"){masty_4="chervi"}
+                if(input_cards_masty_4.value=="Пики" ){masty_4="piki"}
+                if(input_cards_masty_4.value=="Трефы"){masty_4="trefi"}
+                if(input_cards_masty_4.value=="Бубны"){masty_4="bubni"}
+                if(input_cards_masty_5.value=="Черви"){masty_5="chervi"}
+                if(input_cards_masty_5.value=="Пики" ){masty_5="piki"}
+                if(input_cards_masty_5.value=="Трефы"){masty_5="trefi"}
+                if(input_cards_masty_5.value=="Бубны"){masty_5="bubni"}
+                /**********************************************************************/
+                if(input_cards_numeral_1.value=="Валет" ){numeral_1=11}
+                if(input_cards_numeral_1.value=="Дама"  ){numeral_1=12}
+                if(input_cards_numeral_1.value=="Король"){numeral_1=13}
+                if(input_cards_numeral_1.value=="Туз"   ){numeral_1=14}
+                if(input_cards_numeral_2.value=="Валет" ){numeral_2=11}
+                if(input_cards_numeral_2.value=="Дама"  ){numeral_2=12}
+                if(input_cards_numeral_2.value=="Король"){numeral_2=13}
+                if(input_cards_numeral_2.value=="Туз"   ){numeral_2=14}
+                if(input_cards_numeral_3.value=="Валет" ){numeral_3=11}
+                if(input_cards_numeral_3.value=="Дама"  ){numeral_3=12}
+                if(input_cards_numeral_3.value=="Король"){numeral_3=13}
+                if(input_cards_numeral_3.value=="Туз"   ){numeral_3=14}
+                if(input_cards_numeral_4.value=="Валет" ){numeral_4=11}
+                if(input_cards_numeral_4.value=="Дама"  ){numeral_4=12}
+                if(input_cards_numeral_4.value=="Король"){numeral_4=13}
+                if(input_cards_numeral_4.value=="Туз"   ){numeral_4=14}
+                if(input_cards_numeral_5.value=="Валет" ){numeral_5=11}
+                if(input_cards_numeral_5.value=="Дама"  ){numeral_5=12}
+                if(input_cards_numeral_5.value=="Король"){numeral_5=13}
+                if(input_cards_numeral_5.value=="Туз"   ){numeral_5=14}
+                /************************************************************************/
+                lay_out_cards(masty_1,masty_2,masty_3,masty_4,masty_5,numeral_1,numeral_2,numeral_3,numeral_4,numeral_5,"result")
             }
         </script>
 
