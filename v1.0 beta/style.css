@@ -1,0 +1,78 @@
+/*-----------HELLO THIS IS CSS OF MY GAME!-------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.player_menu{
+    position: sticky;
+    margin-top: 65vh;
+    width:100vw;
+    box-shadow: inset 0 0 6px;
+    height:35vh;
+}
+.information_main_player{
+    width:33vh;
+    height:34vh;
+    border-right: black 1px dashed;
+    font-family: 'Kelly Slab', cursive;
+    font-size: 5vh;
+    padding: 1vh;
+    padding-bottom: 0px;
+}
+.playing_card_main_1{
+    height:80%;
+}
+
+.cards_main_div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:130vh;
+    height:35vh;
+    margin-left: 35vh;
+    margin-top:-35vh;
+    border-right: black 1px dashed;
+    /*background-color: black;*/
+}
+.information_min_player_text_1{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons_main {
+    padding: 2vh;
+    padding-bottom: 0px;
+    width: 34.5vh;
+    height: 94%;
+    margin-top: -35vh;
+    margin-left: 165vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+.buttons_lines_1{
+    height:33%;
+    width:100%;
+}
+.stavka_div{
+    position: absolute;
+    left:40vw;
+    width:20vw;
+    height:11vh;
+    top:40vh;
+    box-shadow: inset 0 0 6px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 100;
+}
+.chat_div{
+    width:40vw;
+    height:60vh;
+    position:absolute;
+    top:2.5vh;
+    left:30vw;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: inset 0 0 10px;
+    z-index: 20;
+}

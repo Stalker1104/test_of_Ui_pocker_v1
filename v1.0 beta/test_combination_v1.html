@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test of II combination</title>
+    <link rel="stylesheet" href="style_test.css">
+    <script src="list_of_functions.js"></script>
+    
+</head>
+<body>
+    <div id="all">
+        <!--для красоты-->
+        <div id="images">
+            <img src="../img/cards_jpeg_test_v1/JPEG/undifined_card/undefined.jpg" id="img_card_1" alt="ERROR" style="width:20vh;position:absolute;top: 22vh;left: 1vw; height:25vh;">
+            <img src="../img/cards_jpeg_test_v1/JPEG/undifined_card/undefined.jpg" id="img_card_2" alt="ERROR" style="width:20vh;position:absolute;top: 22vh;left: 21vw;height:25vh;">
+            <img src="../img/cards_jpeg_test_v1/JPEG/undifined_card/undefined.jpg" id="img_card_3" alt="ERROR" style="width:20vh;position:absolute;top: 22vh;left: 41vw;height:25vh;">
+            <img src="../img/cards_jpeg_test_v1/JPEG/undifined_card/undefined.jpg" id="img_card_4" alt="ERROR" style="width:20vh;position:absolute;top: 22vh;left: 61vw;height:25vh;">
+            <img src="../img/cards_jpeg_test_v1/JPEG/undifined_card/undefined.jpg" id="img_card_5" alt="ERROR" style="width:20vh;position:absolute;top: 22vh;left: 81vw;height:25vh;">
+        </div>
+        <script>
+            
+            function in_card_v1(place_to_id,masty,numeral){
+                var trefi_name="C";
+                var bubni_name="D";
+                var chervi_name="H";
+                var piki_name="S";
+                //-------------
+                var valet_name="J";
+                var korol_name="K";
+                var dama_name="Q";
+                var tus_name="A";
+                /*****************/
+                /*****************/
+                place=document.getElementById(place_to_id);
+                var way="../img/cards_jpeg_test_v1/JPEG/cards/"
+                if(numeral==11){way+=valet_name}
+                else if(numeral==12){way+=dama_name}
+                else if(numeral==13){way+=korol_name}
+                else if(numeral==14){way+=tus_name}
+                else{way+=numeral}
+                if(masty=="trefi"){way+=trefi_name}
+                else if(masty=="bubni"){way+=bubni_name}
+                else if(masty=="chervi"){way+=chervi_name}
+                else if(masty=="piki"){way+=piki_name}
+                way+=".jpg"
+                //alert(way)
+                place.src=way;
+            }
+
+        </script>
+        <!---->
+        <!---->
+        <div id="input_div_1">
+
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_1">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_1"></div>
+        <div id="input_div_2">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_2">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_2"></div>
+        <div id="input_div_3">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_3">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_3"></div>
+        <div id="input_div_4">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_4">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_4"></div>
+        <div id="input_div_5">
+            <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_5">
+            <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_5"></div>
+    </div>
+    <div id="butons" style="position: absolute;top: 75vh;width: 100vw;height: 5vh;text-align: center;">
+        <button id="check"style="width: 79vw;text-align: center;">Проверить</button>
+        <button id="all_to_zero"style="width: 20;text-align: center;">Сбросить</button>
+    </div>
+<div id="result" style="position: absolute;top:10vh;width: 100vw;text-align: center;">Тут выпишется комбинация...<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b></div>
+        <script>
+            all_to_zero.onclick=function(){
+                input_cards_masty_1.value=""
+                input_cards_masty_2.value=""
+                input_cards_masty_3.value=""
+                input_cards_masty_4.value=""
+                input_cards_masty_5.value=""
+                /**/
+                input_cards_numeral_1.value=""
+                input_cards_numeral_2.value=""
+                input_cards_numeral_3.value=""
+                input_cards_numeral_4.value=""
+                input_cards_numeral_5.value=""
+                /**/
+                result.innerHTML='Тут выпишется комбинация...<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b>'
+                /**/
+                var numeral_1=""
+                var numeral_2=""
+                var numeral_3=""
+                var numeral_4=""
+                var numeral_5=""
+                var masty_1=""
+                var masty_2=""
+                var masty_3=""
+                var masty_4=""
+                var masty_5=""
+            }
+            check.onclick=function(){
+                if(input_cards_masty_1.value==""||input_cards_masty_2.value==""||input_cards_masty_3.value==""||input_cards_masty_4.value==""||input_cards_masty_5.value==""||input_cards_numeral_1.value==""||input_cards_numeral_2.value==""||input_cards_numeral_3.value==""||input_cards_numeral_4.value==""||input_cards_numeral_5.value==""){alert("Не все данные указаны!")}else{
+
+                
+                /************************************************************************/
+                var numeral_1;
+                var numeral_2;
+                var numeral_3;
+                var numeral_4;
+                var numeral_5;
+                var masty_1;
+                var masty_2;
+                var masty_3;
+                var masty_4;
+                var masty_5;
+                /************************************************************************/
+                if(input_cards_masty_1.value=="Черви"){masty_1="chervi"}
+                if(input_cards_masty_1.value=="Пики" ){masty_1="piki"}
+                if(input_cards_masty_1.value=="Трефы"){masty_1="trefi"}
+                if(input_cards_masty_1.value=="Бубны"){masty_1="bubni"}
+                if(input_cards_masty_2.value=="Черви"){masty_2="chervi"}
+                if(input_cards_masty_2.value=="Пики" ){masty_2="piki"}
+                if(input_cards_masty_2.value=="Трефы"){masty_2="trefi"}
+                if(input_cards_masty_2.value=="Бубны"){masty_2="bubni"}
+                if(input_cards_masty_3.value=="Черви"){masty_3="chervi"}
+                if(input_cards_masty_3.value=="Пики" ){masty_3="piki"}
+                if(input_cards_masty_3.value=="Трефы"){masty_3="trefi"}
+                if(input_cards_masty_3.value=="Бубны"){masty_3="bubni"}
+                if(input_cards_masty_4.value=="Черви"){masty_4="chervi"}
+                if(input_cards_masty_4.value=="Пики" ){masty_4="piki"}
+                if(input_cards_masty_4.value=="Трефы"){masty_4="trefi"}
+                if(input_cards_masty_4.value=="Бубны"){masty_4="bubni"}
+                if(input_cards_masty_5.value=="Черви"){masty_5="chervi"}
+                if(input_cards_masty_5.value=="Пики" ){masty_5="piki"}
+                if(input_cards_masty_5.value=="Трефы"){masty_5="trefi"}
+                if(input_cards_masty_5.value=="Бубны"){masty_5="bubni"}
+                /**********************************************************************/
+                numeral_1=input_cards_numeral_1.value-0
+                numeral_2=input_cards_numeral_2.value-0
+                numeral_3=input_cards_numeral_3.value-0
+                numeral_4=input_cards_numeral_4.value-0
+                numeral_5=input_cards_numeral_5.value-0
+                
+                /**********************************************************************/
+                if(input_cards_numeral_1.value=="Валет" ){numeral_1=11}
+                if(input_cards_numeral_1.value=="Дама"  ){numeral_1=12}
+                if(input_cards_numeral_1.value=="Король"){numeral_1=13}
+                if(input_cards_numeral_1.value=="Туз"   ){numeral_1=14}
+                if(input_cards_numeral_2.value=="Валет" ){numeral_2=11}
+                if(input_cards_numeral_2.value=="Дама"  ){numeral_2=12}
+                if(input_cards_numeral_2.value=="Король"){numeral_2=13}
+                if(input_cards_numeral_2.value=="Туз"   ){numeral_2=14}
+                if(input_cards_numeral_3.value=="Валет" ){numeral_3=11}
+                if(input_cards_numeral_3.value=="Дама"  ){numeral_3=12}
+                if(input_cards_numeral_3.value=="Король"){numeral_3=13}
+                if(input_cards_numeral_3.value=="Туз"   ){numeral_3=14}
+                if(input_cards_numeral_4.value=="Валет" ){numeral_4=11}
+                if(input_cards_numeral_4.value=="Дама"  ){numeral_4=12}
+                if(input_cards_numeral_4.value=="Король"){numeral_4=13}
+                if(input_cards_numeral_4.value=="Туз"   ){numeral_4=14}
+                if(input_cards_numeral_5.value=="Валет" ){numeral_5=11}
+                if(input_cards_numeral_5.value=="Дама"  ){numeral_5=12}
+                if(input_cards_numeral_5.value=="Король"){numeral_5=13}
+                if(input_cards_numeral_5.value=="Туз"   ){numeral_5=14}
+                /************************************************************************/
+                in_card_v1("img_card_1",masty_1,numeral_1)
+                in_card_v1("img_card_2",masty_2,numeral_2)
+                in_card_v1("img_card_3",masty_3,numeral_3)
+                in_card_v1("img_card_4",masty_4,numeral_4)
+                in_card_v1("img_card_5",masty_5,numeral_5)
+                /************************************************************************/
+                console.log("masty_1: "+masty_1+"\nmasty_2: "+masty_2+"\nmasty_3: "+masty_3+"\nmasty_4: "+masty_4+"\nmasty_5: "+masty_5+"\n\n-----------------\n"+"\nnumeral_1: "+numeral_1+"\nnumeral_2: "+numeral_2+"\nnumeral_3: "+numeral_3+"\nnumeral_4: "+numeral_4+"\nnumeral_5: "+numeral_5)
+                lay_out_cards(masty_1,masty_2,masty_3,masty_4,masty_5,numeral_1,numeral_2,numeral_3,numeral_4,numeral_5,"result")
+            }
+            }
+        </script>
+
+<datalist id="masty">
+            <option value="Черви">
+            <option value="Пики" >
+            <option value="Трефы">
+            <option value="Бубны">
+        </datalist>
+        <datalist id="numeral">
+            <option value=1>
+            <option value=2>
+            <option value=3>
+            <option value=4>
+            <option value=5>
+            <option value=6>
+            <option value=7>
+            <option value=8>
+            <option value=9>
+            <option value=10>
+            <option value="Валет">
+            <option value="Дама">
+            <option value="Король">
+            <option value="Туз">
+        </datalist>
+</body>
+</html>

@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="list_of_functions.js"></script>
+    <title>Cardgame</title>
+    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onload_function_1();auto_enter();">
+    <div id="start"style="display:block">
+        <input type="text" id="name_input" placeholder="Введите имя..." value="unknown">
+        <button id="start_button">Начать</button>
+        <form action="">
+            <p><input type="radio" name="a" id="what_your_divise_1" checked> Телефон</p>
+            <p><input type="radio" name="a" id="what_your_divise_2" > Компьютер</p>
+        </form>
+        <div id="hello_k">5hew45</div>
+        <script>
+            
+            start_button.onclick=function(){
+                if(name_input.value!="" ){
+                    player_name=name_input.value;
+                    game.style.display="block"
+                    start.style.display="none"
+                    player_name_div.innerHTML=player_name
+                }
+                
+            }
+        </script>
+    </div>
+    <div id="table_main">
+        <div id="koloda" style="position: absolute;top: 25vh;left:40vw;">
+            <div id="img_of_coloda_div" style="width: 10vw;height: 30vh;"><img src="card_back.png" alt="ERROR" id="img_of_coloda" style="width: 100%;height: 100%;"></div>
+            <div id="img_of_sbros_div"  style="margin-left: 12vw; margin-top:-30vh; width: 10vw;height: 30vh;"><img src="card_back.png" alt="" id="img_of_sbros" style="width: 100%;height: 100%;"></div>
+        </div>
+        <div id="img_of_coloda_div_1" style="position: absolute;top: 25vh;left:40vw;width: 10vw;height: 30vh;"><img src="card_back.png" alt="ERROR" id="img_of_coloda" style="width: 100%;height: 100%;"></div>
+        <script>
+            function give_some_card_main_1(){
+                playing_card_main_1.src="card_example.jpg"
+                playing_card_main_2.src="card_example.jpg"
+                playing_card_main_3.src="card_example.jpg"
+                playing_card_main_4.src="card_example.jpg"
+                playing_card_main_5.src="card_example.jpg"
+                /*
+                playing_card_main_1.src="card_back.png"
+                playing_card_main_2.src="card_back.png"
+                playing_card_main_3.src="card_back.png"
+                playing_card_main_4.src="card_back.png"
+                playing_card_main_5.src="card_back.png"
+                */
+            }
+        </script>
+    </div>
+    <div id="game" style="display:none">
+        
+    <div id="player_menu" class="player_menu">
+        <div id="information_main_player" class="information_main_player">
+            <div class="information_min_player_text_1">
+                <div>Имя:</div>
+                <div id="player_name_div">none</div>
+            </div>
+            <div class="information_min_player_text_1">
+                <div>Деньги:</div>
+                <div id="player_money_div_1">none</div>
+            </div>
+            <div class="information_min_player_text_1">
+                <div>Раунд:</div>
+                <div>?/5</div>
+            </div>
+            <div class="information_min_player_text_1">
+                <div>Время:</div>
+                <div id="battle_time_div">xx/xx</div>
+            </div>
+            <div class="information_min_player_text_1">
+                <div>Ставка:</div>
+                <div id="stavka_main_div">none</div>
+            </div>
+        </div>
+        <div class="cards_main_div">
+            <img src="card_example.jpg" alt="ERROR" class="playing_card_main_1" id="playing_card_main_1">
+            <img src="card_example.jpg" alt="ERROR" class="playing_card_main_1" id="playing_card_main_2">
+            <img src="card_example.jpg" alt="ERROR" class="playing_card_main_1" id="playing_card_main_3">
+            <img src="card_example.jpg" alt="ERROR" class="playing_card_main_1" id="playing_card_main_4">
+            <img src="card_example.jpg" alt="ERROR" class="playing_card_main_1" id="playing_card_main_5">
+        </div>
+           <div id="buttons_main" class="buttons_main">
+                <button id="button_main_1" style="width:34.5vh;height:25%">Выложить</button>
+                <button id="button_main_2" style="width:34.5vh;height:25%">?</button>
+                <button id="button_main_3" style="width:34.5vh;height:25%">Чат</button>
+                <button id="button_main_4" style="width:34.5vh;height:25%">Ставка</button>
+            </div>
+        
+    </div>
+    <!---->
+    <div id="instruments_main_player">
+        <!---->
+        <div id="stavka_div" class="stavka_div" style="display: none;">
+            <div class="h1_stavka_div_div" style="width: 100%;display: flex;justify-content: center;">
+                <h3 id="h1_stavka_div" class="h1_stavka_div">Сколько вы хотите поставить?</h3>
+            </div>
+            <div class="stavka_input_div" id="stavka_input_div" style="width: 100%;display: flex;justify-content: center;">
+                <input type="number" step="50" min="50" value="50" max=player_money id="stavka_input" class="stavka_input" style="width:90%;">
+            </div>
+            <div class="button_stavka_input_div" id="button_stavka_input_div" style="display:block;width: 100%;display: flex;justify-content: center;margin-top: 1vh;">
+                <button id="button_stavka_input_1" style="width:50%;color: black;margin-left: 5vw;">Поставить</button>
+            </div>
+            <div class="button_stavka_input_div_inc" id="button_stavka_input_div_inc" style="display:none;width: 100%;display: flex;justify-content: center;margin-top: 1vh;">
+                <div style="width: 55%;color: red;margin-left: 4vw;">У вас нет стольки денег</div>
+            </div>
+        </div>
+        <!---->
+        <div id="chat_div" class="chat_div" style="display:none;">
+            <div id="text_plase_chat" class="text_plase_chat" style="width: 94%;height: 71%;padding: 3%; overflow: scroll;"></div>
+            <div id="main_writer_instruments" class="main_writer_instruments" style="width:100%;height:20%;box-shadow: inset 0 0 5px;margin-top: 0.3vh;">
+                <input type="text" id="chat_main_input" class="chat_main_input" style="margin-left:5%;margin-top: 6vh;width:80%;height:4vh;">
+                <button id="send_chat_main_button" class="send_chat_main_button" style="height: 4.5vh;width: 9%;">Send</button>
+            </div>
+
+            </div>
+        </div>
+    
+
+    <img src="kombination.png" alt="ERROR" id="kombinations_img" class="kombinations_img_" style="z-index: 50;display:none;position: absolute;left: 40vw;top: 2vh;width: 20vw;height: 60vh;">
+    <script>
+        button_stavka_input_1.onclick=function(){
+            player_money-=(stavka_input.value-0)
+            player_money_div_1.innerHTML=player_money;
+            stavka_main_div.innerHTML=stavka_input.value;
+            stavka_div.style.display="none"
+                stavka_input.value=""
+        }
+        send_chat_main_button.onclick=function(){
+            mail=document.createElement("p");
+            mail.innerHTML=player_name+": "+chat_main_input.value
+            mail.style.marginBottom="2vh"
+            text_plase_chat.appendChild(mail)
+            chat_main_input.value=""
+        }
+        button_main_4.onclick=function(){
+            if(stavka_div.style.display=="none"){
+                stavka_div.style.display="block"
+            }
+            else if(stavka_div.style.display=="block"){
+                stavka_div.style.display="none"
+                stavka_input.value=""
+            }
+        }
+        button_main_2.onclick=function(){
+            if(kombinations_img.style.display=="none"){
+                kombinations_img.style.display="block"
+            }
+            else if(kombinations_img.style.display=="block"){
+                kombinations_img.style.display="none"
+            }
+        }
+        button_main_3.onclick=function(){
+            if(chat_div.style.display=="none"){
+                chat_div.style.display="block"
+            }
+            else if(chat_div.style.display=="block"){
+                chat_div.style.display="none"
+            }
+        }
+
+    </script>
+    </div>
+</body>
+
+</html>
