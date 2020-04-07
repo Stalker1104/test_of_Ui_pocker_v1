@@ -26,11 +26,40 @@
             <input type="text" placeholder="Масть..."list="masty" id="input_cards_masty_5">
             <input type="text" placeholder="Достоинство..."list="numeral" id="input_cards_numeral_5"></div>
     </div>
-<button id="check"style="position: absolute;top:80vh;width: 100vw;text-align: center;">Проверить</button>
-<div id="result" style="position: absolute;top:10vh;width: 100vw;text-align: center;">Тут выпишется комбинация...<!--<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b> --></div>
+    <div id="butons" style="position: absolute;top: 75vh;width: 100vw;height: 5vh;text-align: center;">
+        <button id="check"style="width: 79vw;text-align: center;">Проверить</button>
+        <button id="all_to_zero"style="width: 20;text-align: center;">Сбросить</button>
+    </div>
+<div id="result" style="position: absolute;top:10vh;width: 100vw;text-align: center;">Тут выпишется комбинация...<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b></div>
         <script>
+            all_to_zero.onclick=function(){
+                input_cards_masty_1.value=""
+                input_cards_masty_2.value=""
+                input_cards_masty_3.value=""
+                input_cards_masty_4.value=""
+                input_cards_masty_5.value=""
+                /**/
+                input_cards_numeral_1.value=""
+                input_cards_numeral_2.value=""
+                input_cards_numeral_3.value=""
+                input_cards_numeral_4.value=""
+                input_cards_numeral_5.value=""
+                /**/
+                result.innerHTML='Тут выпишется комбинация...<br><br> <b style="color: red;">Внимание! ИИ исчет самую сильную комбинацию!</b>'
+                /**/
+                var numeral_1=""
+                var numeral_2=""
+                var numeral_3=""
+                var numeral_4=""
+                var numeral_5=""
+                var masty_1=""
+                var masty_2=""
+                var masty_3=""
+                var masty_4=""
+                var masty_5=""
+            }
             check.onclick=function(){
-                
+                if(input_cards_masty_1.value==""||input_cards_masty_2.value==""||input_cards_masty_3.value==""||input_cards_masty_4.value==""||input_cards_masty_5.value==""||input_cards_numeral_1.value==""||input_cards_numeral_2.value==""||input_cards_numeral_3.value==""||input_cards_numeral_4.value==""||input_cards_numeral_5.value==""){alert("Не все данные указаны!")}
                 /************************************************************************/
                 var numeral_1;
                 var numeral_2;
@@ -64,6 +93,13 @@
                 if(input_cards_masty_5.value=="Трефы"){masty_5="trefi"}
                 if(input_cards_masty_5.value=="Бубны"){masty_5="bubni"}
                 /**********************************************************************/
+                numeral_1=input_cards_numeral_1.value-0
+                numeral_2=input_cards_numeral_2.value-0
+                numeral_3=input_cards_numeral_3.value-0
+                numeral_4=input_cards_numeral_4.value-0
+                numeral_5=input_cards_numeral_5.value-0
+                
+                /**********************************************************************/
                 if(input_cards_numeral_1.value=="Валет" ){numeral_1=11}
                 if(input_cards_numeral_1.value=="Дама"  ){numeral_1=12}
                 if(input_cards_numeral_1.value=="Король"){numeral_1=13}
@@ -85,6 +121,7 @@
                 if(input_cards_numeral_5.value=="Король"){numeral_5=13}
                 if(input_cards_numeral_5.value=="Туз"   ){numeral_5=14}
                 /************************************************************************/
+                console.log("masty_1: "+masty_1+"\nmasty_2: "+masty_2+"\nmasty_3: "+masty_3+"\nmasty_4: "+masty_4+"\nmasty_5: "+masty_5+"\n\n-----------------\n"+"\nnumeral_1: "+numeral_1+"\nnumeral_2: "+numeral_2+"\nnumeral_3: "+numeral_3+"\nnumeral_4: "+numeral_4+"\nnumeral_5: "+numeral_5)
                 lay_out_cards(masty_1,masty_2,masty_3,masty_4,masty_5,numeral_1,numeral_2,numeral_3,numeral_4,numeral_5,"result")
             }
         </script>
